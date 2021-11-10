@@ -174,35 +174,35 @@
 </ul>
 <p><strong>Todo:</strong>
  * Allow the option to store the intermediate samples stored in the session. </p>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L30"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L29"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init__"><kbd>method</kbd> <code>__init__</code></h3>
 <pre><code class="language-python">__init__() → None
 </code></pre>
 <p><code>Session</code> Constructor. </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L45"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L43"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-apply"><kbd>method</kbd> <code>apply</code></h3>
 <pre><code class="language-python">apply(process: Process) → Optional[DataSample]
 </code></pre>
-<p>Applies the process by obtaining the necessary inputs and stores the generated output in the records. </p>
+<p>Apply the process by obtaining the necessary inputs and stores the generated output in the records. </p>
 <p><strong>Args:</strong></p>
 <ul>
 <li><b><code>process</code></b> (mm.Proces):  The process to be executed with the records. </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L75"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L71"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-close"><kbd>method</kbd> <code>close</code></h3>
 <pre><code class="language-python">close() → None
 </code></pre>
-<p>Function executed at the end of the data processing. </p>
+<p>Close session. </p>
 <p><strong>Todo:</strong>
   * Add an argument to session to allow the saving of the session  values at the end. </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L35"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L33"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-update"><kbd>method</kbd> <code>update</code></h3>
 <pre><code class="language-python">update(sample: DataSample) → None
 </code></pre>
-<p>Function that stores the sample into the records. </p>
+<p>Store the sample into the records. </p>
 <p><strong>Args:</strong></p>
 <ul>
 <li><b><code>sample</code></b> (mm.DataSample):  The sample to be stored in the records. </li>

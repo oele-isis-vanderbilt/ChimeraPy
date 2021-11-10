@@ -167,7 +167,7 @@
 <hr />
 <p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L26"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-analyzer"><kbd>class</kbd> <code>Analyzer</code></h2>
-<p>Data Processing and Analysis coordinator.  </p>
+<p>Multimodal Data Processing and Analysis Coordinator.  </p>
 <p>The Analyzer is the coordinator between the other modules. First, the analyzer determines the flow of data from the data streams stored in the collector and the given processes. Once the analyzer constructs the data flow graph, the pipelines for the input  data stream are determined and stored. </p>
 <p>Then, when feeding new data samples, the analyzer send them to the right pipeline and its processes. The original data sample and its subsequent generated data sample in the pipeline are stored in the Session as a means to keep track of the latest sample. </p>
 <p><strong>Attributes:</strong></p>
@@ -190,15 +190,15 @@
 </ul>
 <p><strong>Todo:</strong>
  * Make the session have the option to save intermediate  data sample during the analysis, if the user request this feature. </p>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L63"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L61"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init__"><kbd>method</kbd> <code>__init__</code></h3>
 <pre><code class="language-python">__init__(
     collector: Union[Collector, OfflineCollector],
-    processes: List[Process],
+    processes: Sequence[Process],
     session: Session
-)
+) → None
 </code></pre>
-<p>Constructor for the analyzer.  </p>
+<p>Construct the analyzer.  </p>
 <p><strong>Args:</strong></p>
 <ul>
 <li>
@@ -214,13 +214,14 @@
 <hr />
 <p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L166"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-close"><kbd>method</kbd> <code>close</code></h3>
-<pre><code class="language-python">close()
+<pre><code class="language-python">close() → None
 </code></pre>
-<p>The closing routine that executes the processes, collector, session's closing routines as well. </p>
+<p>Close routine that executes all other's closing routines. </p>
+<p>The <code>Analyzer</code>'s closing routine closes all the <code>Process</code>, <code>Collector</code>, and <code>DataStream</code> by executing <code>.close()</code>  methods in each respective component. </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L132"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L129"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-get_sample_pipeline"><kbd>method</kbd> <code>get_sample_pipeline</code></h3>
-<pre><code class="language-python">get_sample_pipeline(sample: DataSample) → List[Process]
+<pre><code class="language-python">get_sample_pipeline(sample: DataSample) → Sequence[Process]
 </code></pre>
 <p>Get the processes that are dependent to this type of data sample. </p>
 <p><strong>Args:</strong></p>
@@ -228,11 +229,12 @@
 <li><b><code>sample</code></b> (mm.DataSample):  The data sample that contains the  data type used to select the data pipeline. </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L142"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L139"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-step"><kbd>method</kbd> <code>step</code></h3>
-<pre><code class="language-python">step(sample: DataSample)
+<pre><code class="language-python">step(sample: DataSample) → None
 </code></pre>
-<p>The main routine executed to process a data sample and update  other subsequent data samples. </p>
+<p>Routine executed to process a data sample. </p>
+<p>Given a <code>DataSample</code> from one of the <code>DataStream</code>s in the  <code>Collector</code>, the <code>Analyzer</code> propagates the data sample through its respective data pipeline and saves intermediate  and final data samples into its <code>Session</code> attribute. </p>
 <p><strong>Args:</strong></p>
 <ul>
 <li><b><code>sample</code></b> (mm.DataSample):  The new input data sample to will be propagated though its corresponding pipeline and stored. </li>

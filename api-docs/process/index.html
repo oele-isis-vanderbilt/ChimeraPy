@@ -160,17 +160,17 @@
               
                 <!-- markdownlint-disable -->
 
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/process.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/process.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h1 id="module-process"><kbd>module</kbd> <code>process</code></h1>
 <p>Module focused on the <code>Process</code> implementation. </p>
 <p>Contains the following classes:  <code>Process</code> </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/process.py#L51"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/process.py#L51"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-metaprocess"><kbd>class</kbd> <code>MetaProcess</code></h2>
 <p>A meta class to ensure that the output of the process is a DataSample. </p>
 <p>Information: https://stackoverflow.com/questions/57104276/python-subclass-method-to-inherit-decorator-from-superclass-method </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/process.py#L63"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/process.py#L63"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-process"><kbd>class</kbd> <code>Process</code></h2>
 <p>Generic class that compartmentalizes computational steps for a datastream. </p>
 <p><strong>Attributes:</strong></p>
@@ -185,7 +185,7 @@
 <p><b><code>trigger</code></b> (Optional[str]):  An optional parameter that overwrites the inputs as the trigger. Instead of executing this process everytime there is a new data sample for the input, it now only executes this process when a new sample with the <code>data_type</code> of  the trigger is obtain. </p>
 </li>
 </ul>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/process.py#L84"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/process.py#L84"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init__"><kbd>method</kbd> <code>__init__</code></h3>
 <pre><code class="language-python">__init__(
     inputs: List[str],
@@ -207,13 +207,13 @@
 </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/process.py#L142"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/process.py#L143"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-close"><kbd>method</kbd> <code>close</code></h3>
 <pre><code class="language-python">close()
 </code></pre>
 <p>Close function performed to close the process. </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/process.py#L20"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/process.py#L20"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="function-wrapper"><kbd>function</kbd> <code>wrapper</code></h3>
 <pre><code class="language-python">wrapper(*args, **kwargs)
 </code></pre>

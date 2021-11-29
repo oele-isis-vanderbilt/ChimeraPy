@@ -166,62 +166,62 @@
               
                 <!-- markdownlint-disable -->
 
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/collector.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/collector.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h1 id="module-collector"><kbd>module</kbd> <code>collector</code></h1>
 <p>Module focused on the <code>Collector</code> and its various implementations. </p>
 <p>Contains the following classes:  <code>Collector</code>  <code>OfflineCollector</code>  <code>OnlineCollector</code> </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/collector.py#L27"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/collector.py#L27"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-collector"><kbd>class</kbd> <code>Collector</code></h2>
 <p>Generic collector that stores a data streams. </p>
 <p><strong>Attributes:</strong></p>
 <ul>
-<li><b><code>data_streams</code></b> (Dict[str, mm.DataStream]):  A dictionary of the  data streams that its keys are the name of the data streams. </li>
+<li><b><code>data_streams</code></b> (Dict[str, pymddt.DataStream]):  A dictionary of the  data streams that its keys are the name of the data streams. </li>
 </ul>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/collector.py#L35"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/collector.py#L36"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init__"><kbd>method</kbd> <code>__init__</code></h3>
 <pre><code class="language-python">__init__(data_streams: Sequence[DataStream]) → None
 </code></pre>
 <p>Construct the <code>Collector</code>. </p>
 <p><strong>Args:</strong></p>
 <ul>
-<li><b><code>data_streams</code></b> (List[mm.DataStream]):  A list of data streams. </li>
+<li><b><code>data_streams</code></b> (List[pymddt.DataStream]):  A list of data streams. </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/collector.py#L44"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/collector.py#L46"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-offlinecollector"><kbd>class</kbd> <code>OfflineCollector</code></h2>
 <p>Generic collector that stores only offline data streams. </p>
 <p>The offline collector allows the use of both <strong>getitem</strong> and <strong>next</strong> to obtain the data pointer to a data stream to fetch the actual data. </p>
 <p><strong>Attributes:</strong></p>
 <ul>
 <li>
-<p><b><code>data_streams</code></b> (Dict[str, mm.OfflineDataStream]):  A dictionary of the  data streams that its keys are the name of the data streams. </p>
+<p><b><code>data_streams</code></b> (Dict[str, pymddt.OfflineDataStream]):  A dictionary of the  data streams that its keys are the name of the data streams. </p>
 </li>
 <li>
 <p><b><code>global_timetrack</code></b> (pd.DataFrame):  A data frame that stores the time, data stream type, and data pointers to allow the iteration over all samples in all data streams efficiently. </p>
 </li>
 </ul>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/collector.py#L60"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/collector.py#L62"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init___1"><kbd>method</kbd> <code>__init__</code></h3>
 <pre><code class="language-python">__init__(data_streams: Sequence[OfflineDataStream]) → None
 </code></pre>
 <p>Construct the <code>OfflineCollector</code>. </p>
 <p><strong>Args:</strong></p>
 <ul>
-<li><b><code>data_streams</code></b> (List[mm.OfflineDataStream]):  A list of offline data streams. </li>
+<li><b><code>data_streams</code></b> (List[pymddt.OfflineDataStream]):  A list of offline data streams. </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/collector.py#L164"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/collector.py#L167"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-onlinecollector"><kbd>class</kbd> <code>OnlineCollector</code></h2>
 <p>TODO implementation. </p>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/collector.py#L35"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/collector.py#L36"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init___2"><kbd>method</kbd> <code>__init__</code></h3>
 <pre><code class="language-python">__init__(data_streams: Sequence[DataStream]) → None
 </code></pre>
 <p>Construct the <code>Collector</code>. </p>
 <p><strong>Args:</strong></p>
 <ul>
-<li><b><code>data_streams</code></b> (List[mm.DataStream]):  A list of data streams. </li>
+<li><b><code>data_streams</code></b> (List[pymddt.DataStream]):  A list of data streams. </li>
 </ul>
 <hr />
 <p><em>This file was automatically generated via <a href="https://github.com/ml-tooling/lazydocs">lazydocs</a>.</em></p>

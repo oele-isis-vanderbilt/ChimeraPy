@@ -160,12 +160,12 @@
               
                 <!-- markdownlint-disable -->
 
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/analyzer.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h1 id="module-analyzer"><kbd>module</kbd> <code>analyzer</code></h1>
 <p>Module focused on the <code>Analyzer</code> implementation. </p>
 <p>Contains the following classes:  <code>Analyzer</code> </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L26"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/analyzer.py#L26"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-analyzer"><kbd>class</kbd> <code>Analyzer</code></h2>
 <p>Multimodal Data Processing and Analysis Coordinator.  </p>
 <p>The Analyzer is the coordinator between the other modules. First, the analyzer determines the flow of data from the data streams stored in the collector and the given processes. Once the analyzer constructs the data flow graph, the pipelines for the input  data stream are determined and stored. </p>
@@ -173,24 +173,24 @@
 <p><strong>Attributes:</strong></p>
 <ul>
 <li>
-<p><b><code>collector</code></b> (mm.Collector):  The collector used to match the  timetracks of each individual data stream. </p>
+<p><b><code>collector</code></b> (pymddt.Collector):  The collector used to match the  timetracks of each individual data stream. </p>
 </li>
 <li>
-<p><b><code>processes</code></b> (List[mm.Process]):  A list of processes to be executed depending on their inputs and triggers. </p>
+<p><b><code>processes</code></b> (Sequence[pymddt.Process]):  A list of processes to be executed depending on their inputs and triggers. </p>
 </li>
 <li>
-<p><b><code>session</code></b> (mm.Session):  The session that stores all of the latest data samples from original and generated data streams. </p>
+<p><b><code>session</code></b> (pymddt.Session):  The session that stores all of the latest data samples from original and generated data streams. </p>
 </li>
 <li>
 <p><b><code>data_flow_graph</code></b> (nx.DiGraph):  The data flow constructed from the data streams and the processes. </p>
 </li>
 <li>
-<p><b><code>pipeline_lookup</code></b> (dict):  A dictionary that stores the pipelines for each type of input data stream. </p>
+<p><b><code>pipeline_lookup</code></b> (Dict):  A dictionary that stores the pipelines for each type of input data stream. </p>
 </li>
 </ul>
 <p><strong>Todo:</strong>
  * Make the session have the option to save intermediate  data sample during the analysis, if the user request this feature. </p>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L61"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/analyzer.py#L61"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init__"><kbd>method</kbd> <code>__init__</code></h3>
 <pre><code class="language-python">__init__(
     collector: Union[Collector, OfflineCollector],
@@ -202,34 +202,34 @@
 <p><strong>Args:</strong></p>
 <ul>
 <li>
-<p><b><code>collector</code></b> (mm.Collector):  The collector used to match the  timetracks of each individual data stream. </p>
+<p><b><code>collector</code></b> (pymddt.Collector):  The collector used to match the  timetracks of each individual data stream. </p>
 </li>
 <li>
-<p><b><code>processes</code></b> (List[mm.Process]):  A list of processes to be executed depending on their inputs and triggers. </p>
+<p><b><code>processes</code></b> (Sequence[pymddt.Process]):  A list of processes to be executed depending on their inputs and triggers. </p>
 </li>
 <li>
-<p><b><code>session</code></b> (mm.Session):  The session that stores all of the latest data samples from original and generated data streams. </p>
+<p><b><code>session</code></b> (pymddt.Session):  The session that stores all of the latest data samples from original and generated data streams. </p>
 </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L166"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/analyzer.py#L166"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-close"><kbd>method</kbd> <code>close</code></h3>
 <pre><code class="language-python">close() → None
 </code></pre>
 <p>Close routine that executes all other's closing routines. </p>
 <p>The <code>Analyzer</code>'s closing routine closes all the <code>Process</code>, <code>Collector</code>, and <code>DataStream</code> by executing <code>.close()</code>  methods in each respective component. </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L129"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/analyzer.py#L129"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-get_sample_pipeline"><kbd>method</kbd> <code>get_sample_pipeline</code></h3>
 <pre><code class="language-python">get_sample_pipeline(sample: DataSample) → Sequence[Process]
 </code></pre>
 <p>Get the processes that are dependent to this type of data sample. </p>
 <p><strong>Args:</strong></p>
 <ul>
-<li><b><code>sample</code></b> (mm.DataSample):  The data sample that contains the  data type used to select the data pipeline. </li>
+<li><b><code>sample</code></b> (pymddt.DataSample):  The data sample that contains the  data type used to select the data pipeline. </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/analyzer.py#L139"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/analyzer.py#L139"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-step"><kbd>method</kbd> <code>step</code></h3>
 <pre><code class="language-python">step(sample: DataSample) → None
 </code></pre>
@@ -237,7 +237,7 @@
 <p>Given a <code>DataSample</code> from one of the <code>DataStream</code>s in the  <code>Collector</code>, the <code>Analyzer</code> propagates the data sample through its respective data pipeline and saves intermediate  and final data samples into its <code>Session</code> attribute. </p>
 <p><strong>Args:</strong></p>
 <ul>
-<li><b><code>sample</code></b> (mm.DataSample):  The new input data sample to will be propagated though its corresponding pipeline and stored. </li>
+<li><b><code>sample</code></b> (pymddt.DataSample):  The new input data sample to will be propagated though its corresponding pipeline and stored. </li>
 </ul>
 <hr />
 <p><em>This file was automatically generated via <a href="https://github.com/ml-tooling/lazydocs">lazydocs</a>.</em></p>

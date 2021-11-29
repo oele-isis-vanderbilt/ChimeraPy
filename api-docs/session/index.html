@@ -160,12 +160,12 @@
               
                 <!-- markdownlint-disable -->
 
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/session.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h1 id="module-session"><kbd>module</kbd> <code>session</code></h1>
 <p>Module focused on the <code>Session</code> implementation. </p>
 <p>Contains the following classes:  <code>Session</code> </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L17"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/session.py#L17"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-session"><kbd>class</kbd> <code>Session</code></h2>
 <p>Data Storage that contains the latest version of all data types. </p>
 <p><strong>Attributes:</strong></p>
@@ -174,23 +174,23 @@
 </ul>
 <p><strong>Todo:</strong>
  * Allow the option to store the intermediate samples stored in the session. </p>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L29"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/session.py#L30"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init__"><kbd>method</kbd> <code>__init__</code></h3>
 <pre><code class="language-python">__init__() → None
 </code></pre>
 <p><code>Session</code> Constructor. </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L43"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/session.py#L44"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-apply"><kbd>method</kbd> <code>apply</code></h3>
 <pre><code class="language-python">apply(process: Process) → Optional[DataSample]
 </code></pre>
 <p>Apply the process by obtaining the necessary inputs and stores the generated output in the records. </p>
 <p><strong>Args:</strong></p>
 <ul>
-<li><b><code>process</code></b> (mm.Proces):  The process to be executed with the records. </li>
+<li><b><code>process</code></b> (pymddt.Process):  The process to be executed with the records. </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L71"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/session.py#L72"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-close"><kbd>method</kbd> <code>close</code></h3>
 <pre><code class="language-python">close() → None
 </code></pre>
@@ -198,14 +198,14 @@
 <p><strong>Todo:</strong>
   * Add an argument to session to allow the saving of the session  values at the end. </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/session.py#L33"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/session.py#L34"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-update"><kbd>method</kbd> <code>update</code></h3>
 <pre><code class="language-python">update(sample: DataSample) → None
 </code></pre>
 <p>Store the sample into the records. </p>
 <p><strong>Args:</strong></p>
 <ul>
-<li><b><code>sample</code></b> (mm.DataSample):  The sample to be stored in the records. </li>
+<li><b><code>sample</code></b> (pymddt.DataSample):  The sample to be stored in the records. </li>
 </ul>
 <hr />
 <p><em>This file was automatically generated via <a href="https://github.com/ml-tooling/lazydocs">lazydocs</a>.</em></p>

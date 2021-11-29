@@ -170,12 +170,12 @@
               
                 <!-- markdownlint-disable -->
 
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/data_stream.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/data_stream.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h1 id="module-data_stream"><kbd>module</kbd> <code>data_stream</code></h1>
 <p>Module focus on DataStream and its various implementations. </p>
 <p>Contains the following classes:  <code>DataStream</code>  <code>OfflineDataStream</code>  <code>OnlineDataStream</code> </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/data_stream.py#L33"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/data_stream.py#L33"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-datastream"><kbd>class</kbd> <code>DataStream</code></h2>
 <p>Generic data sample for both offline and online streaming. </p>
 <p>The DataStream class is a generic class that needs to be inherented and have its <strong>iter</strong> and <strong>next</strong> methods overwritten. </p>
@@ -183,7 +183,7 @@
 <ul>
 <li><b><code>NotImplementedError</code></b>:  The <strong>iter</strong> and <strong>next</strong> functions need to be implemented before calling an instance of this class. </li>
 </ul>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/data_stream.py#L45"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/data_stream.py#L45"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init__"><kbd>method</kbd> <code>__init__</code></h3>
 <pre><code class="language-python">__init__(name: str) → None
 </code></pre>
@@ -193,13 +193,13 @@
 <li><b><code>name</code></b> (str):  the name of the data stream. </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/data_stream.py#L93"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/data_stream.py#L93"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-close"><kbd>method</kbd> <code>close</code></h3>
 <pre><code class="language-python">close() → None
 </code></pre>
 <p>Close routine for <code>DataStream</code>. </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/data_stream.py#L97"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/data_stream.py#L97"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-offlinedatastream"><kbd>class</kbd> <code>OfflineDataStream</code></h2>
 <p>Generic data stream for offline processing. Mostly loading data files. </p>
 <p>OfflineDataStream is intended to be inherented and its <strong>getitem</strong>  method to be overwritten to fit the modality of the actual data. </p>
@@ -211,7 +211,7 @@
 <ul>
 <li><b><code>NotImplementedError</code></b>:  <strong>getitem</strong> function needs to be implemented  before calling. </li>
 </ul>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/data_stream.py#L112"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/data_stream.py#L112"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init___1"><kbd>method</kbd> <code>__init__</code></h3>
 <pre><code class="language-python">__init__(name: str, timetrack: DataFrame)
 </code></pre>
@@ -226,13 +226,13 @@
 </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/data_stream.py#L93"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/data_stream.py#L93"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-close_1"><kbd>method</kbd> <code>close</code></h3>
 <pre><code class="language-python">close() → None
 </code></pre>
 <p>Close routine for <code>DataStream</code>. </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/data_stream.py#L203"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/data_stream.py#L203"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-set_index"><kbd>method</kbd> <code>set_index</code></h3>
 <pre><code class="language-python">set_index(new_index: int) → None
 </code></pre>
@@ -242,7 +242,7 @@
 <li><b><code>new_index</code></b> (int):  The new index to be set. </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/data_stream.py#L187"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/data_stream.py#L187"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-trim_after"><kbd>method</kbd> <code>trim_after</code></h3>
 <pre><code class="language-python">trim_after(trim_time: Timestamp) → None
 </code></pre>
@@ -252,7 +252,7 @@
 <li><b><code>trim_time</code></b> (pd.Timestamp):  The cut-off time. </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/data_stream.py#L171"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/data_stream.py#L171"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-trim_before"><kbd>method</kbd> <code>trim_before</code></h3>
 <pre><code class="language-python">trim_before(trim_time: Timestamp) → None
 </code></pre>

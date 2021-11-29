@@ -156,12 +156,12 @@
               
                 <!-- markdownlint-disable -->
 
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/tabular/tabular_data_stream.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/tabular/tabular_data_stream.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h1 id="module-tabulartabular_data_stream"><kbd>module</kbd> <code>tabular.tabular_data_stream</code></h1>
 <p>Module focused on Tabular Data Stream implementation. </p>
 <p>Contains the following classes:  <code>OfflineTabularDataStream</code> </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/tabular/tabular_data_stream.py#L21"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/tabular/tabular_data_stream.py#L21"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-offlinetabulardatastream"><kbd>class</kbd> <code>OfflineTabularDataStream</code></h2>
 <p>Implementation of Offline DataStream focused on Tabular data. </p>
 <p><strong>Attributes:</strong></p>
@@ -173,12 +173,17 @@
 <p><b><code>data</code></b> (pd.DataFrame):  The loaded Tabular data in pd.DataFrame form. </p>
 </li>
 <li>
-<p><b><code>data_columns</code></b> (List[str]):  A list of string containing the name of the data columns to select from. </p>
+<p><b><code>data_columns</code></b> (Sequence[str]):  A list of string containing the name of the data columns to select from. </p>
 </li>
 </ul>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/tabular/tabular_data_stream.py#L34"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/tabular/tabular_data_stream.py#L34"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init__"><kbd>method</kbd> <code>__init__</code></h3>
-<pre><code class="language-python">__init__(name: str, data: DataFrame, time_column: str, data_columns: List[str])
+<pre><code class="language-python">__init__(
+    name: str,
+    data: DataFrame,
+    time_column: str,
+    data_columns: Sequence[str]
+)
 </code></pre>
 <p>Construct ``OffineTabularDataStream. </p>
 <p><strong>Args:</strong></p>
@@ -193,11 +198,11 @@
 <p><b><code>time_column</code></b> (str):  The column within the data that has the  time data. </p>
 </li>
 <li>
-<p><b><code>data_columns</code></b> (List[str]):  A list of string containing the name of the data columns to select from. </p>
+<p><b><code>data_columns</code></b> (Sequence[str]):  A list of string containing the name of the data columns to select from. </p>
 </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/tabular/tabular_data_stream.py#L67"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/tabular/tabular_data_stream.py#L67"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="classmethod-from_process_and_ds"><kbd>classmethod</kbd> <code>from_process_and_ds</code></h3>
 <pre><code class="language-python">from_process_and_ds(
     process: Process,

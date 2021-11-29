@@ -162,45 +162,45 @@
               
                 <!-- markdownlint-disable -->
 
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/video/processes.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/video/processes.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h1 id="module-videoprocesses"><kbd>module</kbd> <code>video.processes</code></h1>
 <p>Module focused on video process implementations. </p>
 <p>Contains the following classes:  <code>ShowVideo</code>  <code>SaveVideo</code> </p>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/video/processes.py#L20"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/video/processes.py#L20"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-showvideo"><kbd>class</kbd> <code>ShowVideo</code></h2>
 <p>Basic process that shows the video in a CV window. </p>
 <p><strong>Attributes:</strong></p>
 <ul>
 <li>
-<p><b><code>inputs</code></b> (List[str]):  A list of strings containing the inputs requred to execute <code>ShowVideo</code>. In this case, it needs a video frame. </p>
+<p><b><code>inputs</code></b> (Sequence[str]):  A list of strings containing the inputs requred to execute <code>ShowVideo</code>. In this case, it needs a video frame. </p>
 </li>
 <li>
 <p><b><code>ms_delay</code></b> (int):  A millisecond delay between shown frame. </p>
 </li>
 </ul>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/video/processes.py#L31"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/video/processes.py#L31"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init__"><kbd>method</kbd> <code>__init__</code></h3>
-<pre><code class="language-python">__init__(inputs: List[str], ms_delay: int = 1)
+<pre><code class="language-python">__init__(inputs: Sequence[str], ms_delay: int = 1)
 </code></pre>
-<p>Constructor for ShowVideo. </p>
+<p>Construct new <code>ShowVideo</code> instance. </p>
 <p><strong>Args:</strong></p>
 <ul>
 <li>
-<p><b><code>inputs</code></b> (List[str]):  A list of strings containing the inputs required to execute <code>ShowVideo</code>. In this case, it needs a video frame. </p>
+<p><b><code>inputs</code></b> (Sequence[str]):  A list of strings containing the inputs required to execute <code>ShowVideo</code>. In this case, it needs a video frame. </p>
 </li>
 <li>
 <p><b><code>ms_delay</code></b> (int):  A millisecond delay between shown frame. </p>
 </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/video/processes.py#L58"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/video/processes.py#L58"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h2 id="class-savevideo"><kbd>class</kbd> <code>SaveVideo</code></h2>
 <p>Basic process that saves the video. </p>
 <p><strong>Attributes:</strong></p>
 <ul>
 <li>
-<p><b><code>inputs</code></b> (List[str]):  A list of strings containing the inputs  required to execute <code>SaveVideo</code>. In this case, it needs a video frame. </p>
+<p><b><code>inputs</code></b> (Sequence[str]):  A list of strings containing the inputs  required to execute <code>SaveVideo</code>. In this case, it needs a video frame. </p>
 </li>
 <li>
 <p><b><code>fps</code></b> (int):  The frames per second (FPS) used to save the video. </p>
@@ -212,10 +212,10 @@
 <p><b><code>writer</code></b> (cv2.VideoWriter):  The video writer from OpenCV used to write and save the video. </p>
 </li>
 </ul>
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/video/processes.py#L74"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/video/processes.py#L74"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-__init___1"><kbd>method</kbd> <code>__init__</code></h3>
 <pre><code class="language-python">__init__(
-    inputs: List[str],
+    inputs: Sequence[str],
     filepath: Union[str, Path],
     fps: int,
     size: Tuple[int, int],
@@ -226,7 +226,7 @@
 <p><strong>Args:</strong></p>
 <ul>
 <li>
-<p><b><code>inputs</code></b> (List[str]):  A list of strings containing the inputs  required to execute <code>SaveVideo</code>. In this case, it needs a video frame. </p>
+<p><b><code>inputs</code></b> (Sequence[str]):  A list of strings containing the inputs  required to execute <code>SaveVideo</code>. In this case, it needs a video frame. </p>
 </li>
 <li>
 <p><b><code>filepath</code></b> (Union[str, pathlib.Path]):  The filepath to save the  new video file. </p>
@@ -242,7 +242,7 @@
 </li>
 </ul>
 <hr />
-<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/mm/video/processes.py#L131"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
+<p><a href="https://github.com/edavalosanaya/PyMMDT/blob/main/pymmdt/video/processes.py#L131"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a></p>
 <h3 id="method-close"><kbd>method</kbd> <code>close</code></h3>
 <pre><code class="language-python">close() → None
 </code></pre>

@@ -35,6 +35,49 @@
             
   <section id="pipeline">
 <h1>Pipeline<a class="headerlink" href="#pipeline" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Pipeline</span></span></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">end</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span></dt>
+<dd><p>Ending routine of the <code class="docutils literal notranslate"><span class="pre">Pipeline</span></code></p>
+<p>This method is has a similar purpose as <code class="docutils literal notranslate"><span class="pre">start</span></code>, where the
+user can define logic at the end of the processing by the
+<code class="docutils literal notranslate"><span class="pre">Pipeline</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span></dt>
+<dd><p>Starting routine for the <code class="docutils literal notranslate"><span class="pre">Pipeline</span></code>.</p>
+<p>This method is intended to be overwritten by the user to execute
+code before the <code class="docutils literal notranslate"><span class="pre">Pipeline</span></code> starts processing data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span></dt>
+<dd><p>Take one step in processing a time window collection of data.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">step</span></code> method is the heart of the user defined processing
+of the data from the data streams. Here the user organizes the
+ordering and what type of processing will be performed to
+achieve getting the desired output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_samples</strong> (<em>Union</em><em>[</em><em>Dict</em><em>[</em><em>str</em><em>, </em><em>pd.DataFrame</em><em>]</em><em>, </em><em>Dict</em><em>[</em><em>str</em><em>, </em><em>Dict</em><em>[</em><em>str</em><em>, </em><em>pd.DataFrame</em><em>]</em><em>]</em><em>]</em>) – The data samples are provided by the <code class="docutils literal notranslate"><span class="pre">Loader</span></code>. The first                 level keys are the runners’ (<code class="docutils literal notranslate"><span class="pre">SingleRunner</span></code> and                 <code class="docutils literal notranslate"><span class="pre">GroupRunner</span></code>) names. The second level keys are then the                 names of the data streams; hence, the second level values                 are the data frames obtain from each data stream.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The                 output (if running in a <code class="docutils literal notranslate"><span class="pre">SingleRunner</span></code> that is                 orchestrated by <code class="docutils literal notranslate"><span class="pre">GroupRunner</span></code>) is then feed to the main                 <code class="docutils literal notranslate"><span class="pre">Pipeline</span></code> of the <code class="docutils literal notranslate"><span class="pre">GroupRunner</span></code> to allow collective                 analyze of multiple <code class="docutils literal notranslate"><span class="pre">Pipelines</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[Union[pd.DataFrame, List[pd.DataFrame]]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 

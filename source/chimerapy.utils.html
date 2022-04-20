@@ -38,11 +38,107 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </section>
-<section id="chimerapy-utils-tobii-module">
-<h2>chimerapy.utils.tobii module<a class="headerlink" href="#chimerapy-utils-tobii-module" title="Permalink to this headline">¶</a></h2>
+<section id="module-chimerapy.utils.tobii">
+<span id="chimerapy-utils-tobii-module"></span><h2>chimerapy.utils.tobii module<a class="headerlink" href="#module-chimerapy.utils.tobii" title="Permalink to this headline">¶</a></h2>
+<p>Utils package is a collection of common tools to use alongside ChimeraPy.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="chimerapy.utils.tobii.load_g3_file">
+<span class="sig-name descname"><span class="pre">load_g3_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gz_filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span></span></span><a class="headerlink" href="#chimerapy.utils.tobii.load_g3_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the Tobii g3 file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>gz_filepath</strong> (<em>pathlib.Path</em>) – The filepath to the gz file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The content of the gz file.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chimerapy.utils.tobii.load_multiple_sessions_in_one_directory">
+<span class="sig-name descname"><span class="pre">load_multiple_sessions_in_one_directory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_sync</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#chimerapy.utils.tobii.load_multiple_sessions_in_one_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load multiple Tobii session if found in the same parent directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_dir</strong> (<em>pathlib.Path</em>) – The directory containing the Tobii             sessions.</p></li>
+<li><p><strong>time_sync</strong> (<em>bool</em>) – If to synchronize the Tobii sessions.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – Debugging printout.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The sessions arranged in a dictionary. Keys are             the name of the sessions and the values are dictionary with the             following string keys: <code class="docutils literal notranslate"><span class="pre">data</span></code> and <code class="docutils literal notranslate"><span class="pre">rec_specs</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dict[str, Dict[str,Any]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chimerapy.utils.tobii.load_single_session">
+<span class="sig-name descname"><span class="pre">load_single_session</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="chimerapy.core.html#chimerapy.core.data_stream.DataStream" title="chimerapy.core.data_stream.DataStream"><span class="pre">chimerapy.core.data_stream.DataStream</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#chimerapy.utils.tobii.load_single_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a single Tobii session data.</p>
+<p>If this is the first time loading the session, a longer processing
+will be done to convert gz data to csv. This is done so that future
+loads are in orders of magnitude faster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dir</strong> (<em>pathlib.Path</em>) – The session’s directory.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – Debugging printout.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Tuple containing a
+list of the data streams (‘video’ and ‘gaze’) and the recording
+specifications as a data frame.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tuple[Sequence[<a class="reference internal" href="chimerapy.core.html#chimerapy.core.data_stream.DataStream" title="chimerapy.core.data_stream.DataStream">DataStream</a>], pd.DataFrame]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chimerapy.utils.tobii.load_temporal_gz_file">
+<span class="sig-name descname"><span class="pre">load_temporal_gz_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gz_filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#chimerapy.utils.tobii.load_temporal_gz_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the temporal gz file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gz_filepath</strong> (<em>pathlib.Path</em>) – Filepath to the gz file.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – Debugging printout.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The contents of the gz file.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="chimerapy.utils.tobii.synchronize_tobii_recordings">
+<span class="sig-name descname"><span class="pre">synchronize_tobii_recordings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sessions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#chimerapy.utils.tobii.synchronize_tobii_recordings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synchronize multiple Tobii sessions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sessions</strong> (<em>Dict</em><em>[</em><em>str</em><em>,</em><em>Any</em><em>]</em>) – A dictionary of sessions, organized             by keys (names of the sessions) and the values (the tuple of             the session’s data streams and recordings specifications).</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<section id="module-chimerapy.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-chimerapy.utils" title="Permalink to this headline">¶</a></h2>
+<p>Package for additional tools that are commonly used with PyMMDT.</p>
 </section>
 </section>
 

@@ -181,15 +181,10 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="chimerapy.core.tabular.entry.ImageEntry.flush">
 <span class="sig-name descname"><span class="pre">flush</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chimerapy.core.tabular.entry.ImageEntry.flush" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write/Save changes and mark them as processed.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>NotImplementedError</strong> – <code class="docutils literal notranslate"><span class="pre">Entry</span></code> is an abstract class. The</p></li>
-<li><p><strong>flush` needs to be implemented in concrete classes</strong> – </p></li>
-</ul>
-</dd>
-</dl>
+<dd><p>Flush out unsaved changes to memory.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">ImageEntry</span></code>, a folder is created, the images are stored
+inside, and finally a csv file is saved with the timestamps
+pertaining to each image.</p>
 </dd></dl>
 
 </dd></dl>
@@ -216,14 +211,6 @@
 <dt class="sig sig-object py" id="chimerapy.core.tabular.entry.TabularEntry.flush">
 <span class="sig-name descname"><span class="pre">flush</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chimerapy.core.tabular.entry.TabularEntry.flush" title="Permalink to this definition">¶</a></dt>
 <dd><p>Commit the unsaved changes to memory.</p>
-<dl>
-<dt>TODO</dt><dd><ul class="simple">
-<li><p>Might want to create a separate thread for this, as I/O</p></li>
-</ul>
-<p>processes can be very slow. Or maybe we can add the new
-thread in the DataStream class <code class="docutils literal notranslate"><span class="pre">save</span></code> method.</p>
-</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>

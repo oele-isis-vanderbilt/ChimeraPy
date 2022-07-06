@@ -3,8 +3,9 @@
 /.vscode
 
 # Ignore the test data - sensitivie
-tests/data/
 tests/test_output/
+tests/data/gui_input_data_case/example_long_group
+tests/data/gui_input_data_case/example_long_single
 *.csv
 
 # Ignoring the documentation site
